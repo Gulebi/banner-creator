@@ -15,7 +15,13 @@ function CanvasAvatar({ data, isSelected }: IProps) {
 
     return (
         <>
-            <Circle ref={elRef} {...data.baseInfo} draggable onClick={() => onSelectShape(elRef, trRef)} />;
+            <Circle
+                ref={elRef}
+                {...data.baseInfo}
+                draggable
+                fill="#2C333A"
+                onClick={() => onSelectShape(elRef, trRef)}
+            />
             {isSelected && (
                 <Transformer
                     ref={trRef}
